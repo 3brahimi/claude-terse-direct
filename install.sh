@@ -2,12 +2,23 @@
 # Installs the terse-direct Claude Code output style into ~/.claude/output-styles/
 set -euo pipefail
 
-SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+RAW_BASE="https://raw.githubusercontent.com/3brahimi/terse-direct/main"
+REFS="algorithmic-technique.md ascii-diagram-alignment.md avoid-signs-of-ai.md list-of-algorithms.md"
 DEST="${CLAUDE_CONFIG_DIR:-$HOME/.claude}/output-styles"
 
 mkdir -p "$DEST/refs"
-cp "$SRC/terse-direct.md" "$DEST/terse-direct.md"
-cp "$SRC"/refs/*.md "$DEST/refs/"
+
+# Local checkout (script has terse-direct.md next to it) vs. piped install (curl | bash).
+SRC="$(cd "$(dirname "${BASH_SOURCE[0]:-}")" 2>/dev/null && pwd || true)"
+if [ -n "$SRC" ] && [ -f "$SRC/terse-direct.md" ]; then
+  cp "$SRC/terse-direct.md" "$DEST/terse-direct.md"
+  cp "$SRC"/refs/*.md "$DEST/refs/"
+else
+  curl -fsSL "$RAW_BASE/terse-direct.md" -o "$DEST/terse-direct.md"
+  for f in $REFS; do
+    curl -fsSL "$RAW_BASE/refs/$f" -o "$DEST/refs/$f"
+  done
+fi
 
 echo "Installed terse-direct to $DEST"
 

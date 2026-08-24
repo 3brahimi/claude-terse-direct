@@ -41,7 +41,7 @@ def box(lines, pad=1):
 After generating, check that every line of the diagram (or every line
 within one box, if boxes have different widths) has the same `len()`.
 This is the actual test that would have caught every jagged diagram before
-it shipped — not a re-read, not eyeballing the terminal render:
+it shipped, not a re-read, not eyeballing the terminal render:
 
 ```python
 lens = set(len(l) for l in outer_box)
@@ -56,7 +56,7 @@ data-flow direction being depicted:
 
 - `►` / `→`: rightward, out of a box on its right edge.
 - `◄` / `←`: leftward, out of a box on its left edge (or into it from the
-  left — direction is about dataflow, not box side; check which port is
+  left; direction is about dataflow, not box side, so check which port is
   the input and which is the output before picking the glyph).
 - `▼` / `▲`: down/up between vertically stacked boxes.
 
@@ -68,4 +68,4 @@ output port's arrow is pointing the wrong way. Check both, separately.
 Any multi-line box/arrow diagram bound for a doc (architecture diagrams,
 testbench structure diagrams, block diagrams in mas-digest/VAD-style docs).
 Skip it for a diagram that's genuinely one box with no nesting and no side
-labels — those are safe to hand-type and check by eye.
+labels; those are safe to hand-type and check by eye.

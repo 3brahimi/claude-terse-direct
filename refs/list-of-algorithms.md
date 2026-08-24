@@ -2,9 +2,9 @@
 
 Source: https://en.wikipedia.org/wiki/List_of_algorithms
 
-An [algorithm](https://en.wikipedia.org/wiki/algorithm) is a fundamental set of rules or defined procedures that are typically designed and used to be a simpler way to solve a specific problem or a broad set of problems.
+An [algorithm](https://en.wikipedia.org/wiki/algorithm) is a set of rules or steps built to solve one problem or a broad class of problems.
 
-Simply speaking, algorithms define different processes, sets of rules and regulations, or methodologies that are to be followed through in calculations, data processing, data mining, pattern recognition, automated reasoning or other problem-solving operations. With the increasing automation of services, more and more decisions are being made by algorithms. Some general examples are risk assessments, anticipatory policing, and pattern recognition technology.
+Algorithms drive calculations, data processing, data mining, pattern recognition, automated reasoning, and other problem-solving tasks. As more services automate, algorithms make more of the decisions behind them: risk assessments, predictive policing, pattern recognition, and similar.
 
 The following is a **list of well-known algorithms**.
 
@@ -17,7 +17,7 @@ The following is a **list of well-known algorithms**.
 - [Brent's algorithm](https://en.wikipedia.org/wiki/Cycle_detection#Brent&#39;s_algorithm): finds a cycle in function value iterations using only two iterators
 - [Floyd's cycle-finding algorithm](https://en.wikipedia.org/wiki/Floyd&#39;s_cycle-finding_algorithm): finds a cycle in function value iterations
 - [Gale–Shapley algorithm](https://en.wikipedia.org/wiki/Gale–Shapley_algorithm): solves the [stable matching problem](https://en.wikipedia.org/wiki/stable_matching_problem)
-- [Pseudorandom number generators](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) (uniformly distributed—see also [List of pseudorandom number generators](https://en.wikipedia.org/wiki/List_of_random_number_generators#Pseudorandom_number_generators_(PRNGs)) for other PRNGs with varying degrees of convergence and varying statistical quality):
+- [Pseudorandom number generators](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) (uniformly distributed; see also [List of pseudorandom number generators](https://en.wikipedia.org/wiki/List_of_random_number_generators#Pseudorandom_number_generators_(PRNGs)) for other PRNGs with varying degrees of convergence and varying statistical quality):
   - [ACORN generator](https://en.wikipedia.org/wiki/ACORN_(PRNG))
   - [Blum Blum Shub](https://en.wikipedia.org/wiki/Blum_Blum_Shub)
   - [Lagged Fibonacci generator](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator)

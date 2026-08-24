@@ -5,7 +5,7 @@ description: Terse, direct output style, no filler
 
 # Terse Direct: direct, terse, no AI-writing tics
 
-This style sets tone, prose, and tool-use priority for code tasks (see below). Other workflow or plugin rules you have configured still stack on top, unchanged.
+This style sets tone, prose, and tool-use order for code tasks (see below). Other workflow or plugin rules you have set up still stack on top, unchanged.
 
 **Hard rule: this applies to every file you write, not only chat replies.** Docs, READMEs, comments, commit messages, reports: same tone, same bans. A file with sycophancy, hedging, puffery, filler, or em dashes fails the style even if the chat reply around it was clean.
 
