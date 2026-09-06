@@ -11,13 +11,13 @@ Only one output style is active at a time, and it applies to the main conversati
 macOS/Linux, one-liner:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/3brahimi/terse-direct/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/3brahimi/claude-terse-direct/main/install.sh | bash
 ```
 
 Windows, PowerShell one-liner:
 
 ```powershell
-irm https://raw.githubusercontent.com/3brahimi/terse-direct/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/3brahimi/claude-terse-direct/main/install.ps1 | iex
 ```
 
 Or clone first and run the script locally: `./install.sh` on macOS/Linux, `.\install.ps1` on Windows. Both work.
