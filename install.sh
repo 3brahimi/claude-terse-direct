@@ -2,7 +2,7 @@
 # Installs the terse-direct Claude Code output style into ~/.claude/output-styles/
 set -euo pipefail
 
-RAW_BASE="https://raw.githubusercontent.com/3brahimi/terse-direct/main"
+RAW_BASE="https://raw.githubusercontent.com/3brahimi/claude-terse-direct/main"
 REFS="algorithmic-technique.md ascii-diagram-alignment.md avoid-signs-of-ai.md list-of-algorithms.md"
 DEST="${CLAUDE_CONFIG_DIR:-$HOME/.claude}/output-styles"
 
