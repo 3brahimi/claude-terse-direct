@@ -1,7 +1,7 @@
 # Installs the terse-direct Claude Code output style into %USERPROFILE%\.claude\output-styles\
 $ErrorActionPreference = "Stop"
 
-$RawBase = "https://raw.githubusercontent.com/3brahimi/terse-direct/main"
+$RawBase = "https://raw.githubusercontent.com/3brahimi/claude-terse-direct/main"
 $Refs = @("algorithmic-technique.md", "ascii-diagram-alignment.md", "avoid-signs-of-ai.md", "list-of-algorithms.md")
 $ConfigDir = if ($env:CLAUDE_CONFIG_DIR) { $env:CLAUDE_CONFIG_DIR } else { $env:USERPROFILE }
 $Dest = Join-Path $ConfigDir ".claude\output-styles"
@@ -30,9 +30,10 @@ $Settings = Join-Path $SettingsDir "settings.json"
 New-Item -ItemType Directory -Force -Path $SettingsDir | Out-Null
 if (-not (Test-Path $Settings)) { "{}" | Set-Content -Path $Settings -Encoding utf8 }
 
-$json = Get-Content $Settings -Raw | ConvertFrom-Json -AsHashtable
-if (-not $json) { $json = @{} }
-$json["outputStyle"] = $StyleName
+$jsonText = Get-Content $Settings -Raw
+$json = if ($jsonText) { ConvertFrom-Json $jsonText } else { $null }
+if (-not $json) { $json = New-Object PSObject }
+$json | Add-Member -Name "outputStyle" -Value $StyleName -MemberType NoteProperty -Force
 ($json | ConvertTo-Json -Depth 32) | Set-Content -Path $Settings -Encoding utf8
 
 Write-Host "Set outputStyle to `"$StyleName`" in $Settings"
